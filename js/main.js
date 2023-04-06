@@ -91,7 +91,7 @@ function disable_animations() {
 }
 
 function show_sec() {
-  document.getElementById("sec").style.top = "92%"
+  document.getElementById("sec").style.top = "93%"
 }
 
 window.addEventListener("resize", function() {
