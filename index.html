@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Janis Winkelmann</title>
+    <meta name="description" content="Meine eigene Website.">
+    <meta name="author" content="SitePoint">
+
+    <meta property="og:title" content="Janis Winkelmann">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Meine eigene Website.">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/transition.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body id="main">
+    <div class="bg-wrapper" id="bg">
+        <div class="chrome-wrapper" onclick="unclose_()">
+            <img class="chrome" src="img/chrome.png">
+        <h6 class="chrome-text">Chrome</h6>
+        </div>
+    </div>
+    <nav class="navbar-hide dropdown">
+        <button class="dropdown-btn" onclick="unminimize()">Fenster zeigen</button>
+    </nav>
+    
+    
+    <div class="main-container">
+        <!-- <img src="img/right.png" draggable="false" class="right"> -->
+        <div class="nav">
+            <div class="traffic-lights">
+                <div class="traffic-light red" transition-style="in:circle:center" style="--transition__delay: 0.6s; --transition__duration: 1s; margin-left: 15px" data-toggle="tooltip" title="Schließen" onclick="close_()" id="red"></div>
+                <div class="traffic-light yellow" transition-style="in:circle:center" style="--transition__delay: 0.9s; --transition__duration: 1s;" data-toggle="tooltip" title="Minimieren" onclick="minimize()" id="yellow"></div>
+                <div class="traffic-light green" transition-style="in:circle:center" style="--transition__delay: 1.2s; --transition__duration: 1s;" data-toggle="tooltip" title="Vollbild" onclick="maximize()" id="green"></div>
+            </div>
+            <h4 class="window-header" id="header" transition-style="in:square:center" style="--transition__delay: 1.5s; --transition__duration: 1s;">Janis Winkelmann</h4>
+        </div>
+
+        <h2 class="align-left lap-1" transition-style="in:wipe:right" style="--transition__delay: 2s; --transition__duration: 9s;" id="hi">Hi👋</h2>
+        <div class="typewriter-container"><h2 class="align-left lap-2 typewriter" id="typewriter"> </h2></div>
+        <div class="about-me" transition-style="in:wipe:right" style="--transition__delay: 3.6s; --transition__duration: 2s;" id="abt-me">
+            <h3>Über Mich</h3>
+            <ul transition-style="in:wipe:right" style="--transition__delay: 4s; --transition__duration: 2.5s;" id="ul">
+                <li>Ich mag Fahrradfahren.</li>
+                <li>Ich bin gut in Englisch.</li>
+                <li>Ich kann 6 Programmiersprachen.</li>
+                <li>Mein Lieblings-Song ist <a href="https://open.spotify.com/track/7a2qCf0kCwYD6FIayIdjE9?si=637ce7fa8c5e4254" target="_blank" data-toggle="tooltip" title="Klicke zum öffnen">Barbwire von CANA</a>.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sec-container" id="sec">
+        <div class="move-down-wrapper" id="movedown" onclick="scrollToY(863)" transition-style="in:wipe:up" style="--transition__delay: 6.1s; --transition__duration: 1s;">
+            <div class="move-down"></div>
+        </div>
+        <h1 class="header" id="header1">Meine Projekte</h1>
+        <div class="grid-container">
+            <a href="https://github.com/winkelmannjanis/Password-Manager" target="_blank">
+                <div class="grid-item">
+                    <div class="hvr">
+                        <div>
+                            <img src="img/projekt1.png" draggable="false" class="grid-img">
+                            <h2 class="sub-header">Password Manager</h2>
+                            <h3 class="sub-description">Ein Password Manager mit 4 Menü Optionen geschriben in Python, der die Daten in einer Datenbank automatisch speichert.</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/winkelmannjanis/Discord-Account-Manager" target="_blank">
+                <div class="grid-item">
+                    <div class="hvr">
+                        <div>
+                            <img src="img/projekt2.png" draggable="false" class="grid-img">
+                            <h2 class="sub-header">Discord Manager</h2>
+                            <h3 class="sub-description">Eines meiner ersten Projekte. Mit diesem Programm kann man sachen auf Discord automatisieren, um sie schneller zu machen.</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/winkelmannjanis/github-username-checker" target="_blank">
+                <div class="grid-item">
+                    <div class="hvr">
+                        <div>
+                            <img src="img/projekt3.png" draggable="false" class="grid-img">
+                            <h2 class="sub-header">Github Checker</h2>
+                            <h3 class="sub-description">Dieses Programm benutzt Python Selenium, um möglichst kurze Benutzernamen zu bekommen die noch verfügbar sind.</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/winkelmannjanis/Shoppy-Coupon-Code-Checker" target="_blank">
+                <div class="grid-item">
+                    <div class="hvr">
+                        <div>
+                            <img src="img/projekt4.png" draggable="false" class="grid-img">
+                            <h2 class="sub-header">Coupon Checker</h2>
+                            <h3 class="sub-description">Man kann bei Shoppy Produkten Coupon Codes eingeben. Dieses Programm geht durch die häufigsten automatisch.</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/winkelmannjanis/Discord-Id-Scraper" target="_blank">
+                <div class="grid-item">
+                    <div class="hvr">
+                        <div>
+                            <img src="img/projekt5.png" draggable="false" class="grid-img">
+                            <h2 class="sub-header">Discord Scraper</h2>
+                            <h3 class="sub-description">Guckt auf mehreren Discord Accounts gleichzeitig nach Nutzern, und sammelt sie in einer Datenbank</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/sellpass/python-api-sdk" target="_blank">
+                <div class="grid-item">
+                    <div class="hvr">
+                        <div>
+                            <img src="img/projekt6.svg" draggable="false" class="grid-img">
+                            <h2 class="sub-header">SellPass Python SDK</h2>
+                            <h3 class="sub-description">Ich habe für eine große E-Commerce Firma ein Tool programmiert. Es ist ein Python Modul für ihre Developer API.</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="custom-shape-divider-bottom-1680742719">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="thd-container">
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script src="js/main.js"></script>
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>
